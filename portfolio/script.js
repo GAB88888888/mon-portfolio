@@ -76,3 +76,13 @@ video.addEventListener('dblclick', function() {
         video.msRequestFullscreen();
     }
 });
+
+window.onload = function() {
+    const zoomWarning = document.getElementById("zoomWarning");
+    zoomWarning.style.display = 'flex'; // Affiche la pop-up lorsque la page charge
+};
+
+function closePopup() {
+    const zoomWarning = document.getElementById("zoomWarning");
+    zoomWarning.style.display = 'none'; // Cache la pop-up
+}
