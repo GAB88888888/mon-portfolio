@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Epics games</title>
+    <link rel="stylesheet" href="css/css-support.css">
+    <link rel="stylesheet" href="css/css-base.css"> 
+    
+
+</head>
+<body>
+	<header>
+        <nav class="nav-gauche">
+            <ul>
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="jeux.html">Jeux</a></li>
+                <li><a href="info.html">A propos</a></li>
+                <li><a href="covoiturage.html">Covoiturage</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="support.html">Support</a></li>
+            </ul>
+        </nav>
+		<div class="header-mid">    
+            <a href="Accueil.html"><img src="img/epics_game.png" alt="logo" class="logo"></a>
+            
+        </div>
+        <nav class="nav-droite">
+            <ul>
+                <li><a href="Compte.html">Compte</a></li>
+                <li><a href="?">|||</a></li>
+            </ul>
+        </nav>
+	</header>
+
+<main>
+    <div class="demande">
+        <form class="forme">
+            <fieldset>
+                <legend>Demande de contact</legend>
+                
+                <label for="problem-type">Quelle est le type de problème :</label>
+                <select id="problem-type" name="problem-type">
+                    <option value="type1"> </option>
+                    <option value="type2">probleme de connexion</option>
+                    <option value="type3">probleme de paiment</option>
+                    <option value="type4">probleme sur un jeux</option>
+                    <option value="type5">Autres</option>
+                </select>
+                
+                <p>Par quelle moyen souhaitez-vous être contacté :</p>
+                <div class="contact-options">
+                    <label><input type="checkbox" name="contact-method" value="sms"> SMS</label>
+                    <label><input type="checkbox" name="contact-method" value="phone" checked> Courier</label>
+                    <label><input type="checkbox" name="contact-method" value="email"> Email</label>
+                </div>
+                
+                <br><label for="description">Description du problème :</label></br>
+                <textarea id="description" name="description" rows="4" ></textarea>
+                
+                <label for="phone">Numéro de téléphone :</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="address">Adresse :</label>
+                <input type="text" id="address" name="address">
+
+                <button class="button">Envoyer</button>
+
+            </fieldset>
+        </form>
+    </div>
+</main>
+<footer>
+    <a href="https://fr.trustpilot.com/review/www.epicgames.com"><img src="img/avis.png" alt="Avis" width="150" class="footer-img"></a>
+    <a href="https://en.wikipedia.org/wiki/Unreal_Engine"><img src="img/unrealengine.png" alt="Logo unreal" width="140" class="footer-img"></a>
+    </footer>
+</body>
