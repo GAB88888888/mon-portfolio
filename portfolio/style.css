@@ -1,0 +1,441 @@
+body {
+    margin: 0;
+    font-family: Sulphur Point,sans-serif;
+    background-color: #ececec
+    ;
+}
+
+header {
+    height: 100vh; /* Plein écran */
+    background-image: url('img/fon-ecran.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Centre verticalement */
+    align-items: center;     /* Centre horizontalement */
+    position: relative;
+    margin: 0;
+}
+
+.header-content {
+    margin-bottom: 450px;
+    margin-right: 850px;
+}
+
+.bouton-commencer {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 330px;   /* distance depuis le bas du header */
+    right: 300px;     /* distance depuis la gauche du header */
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 55px 70px;
+    display: block;
+}
+
+.bouton-commencer:hover {
+    transform: scale(1.2); /* zoom léger */
+    cursor: pointer; /* change le curseur pour montrer que c’est interactif */
+    transition: all 0.3s ease;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    background: #040506;
+    padding: 22px;
+    margin-left: -50px;
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    width: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    transition: 0.5s ease;
+}
+
+#navbar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav a:hover{
+    transition: font-weight 0.2s ease;
+    font-weight: bold;
+    text-shadow: 0 2px 10px rgb(255, 255, 255);
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin-left: 80px;
+    margin-right: auto;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    border-left: 6px solid rgb(0, 0, 255);
+    padding-left: 10px;
+}
+
+.project span {
+    color: #000000;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #000000;
+    color: white;
+}
+
+.nom {
+    font-weight: normal;
+    color: white;
+    width: 100%;
+    z-index: 100;
+    display: block;
+    font-size: 5rem;
+    margin-bottom: 0px;
+}
+
+.titre {
+    color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 100;
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+p1{
+    font-size: 2.5rem;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p2{
+    font-size: 1.2rem;
+    color: white;
+}
+
+.mot {
+    position: absolute;
+    bottom: 150px;   /* distance depuis le bas du header */
+    left: 60px;     /* distance depuis la gauche du header */
+}
+
+.hero {
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+}
+
+#about {
+    margin-top: 80px; /* la hauteur de ta navbar sticky */
+    transition: padding-top 0.3s ease;
+}
+
+.box-image{
+    position: absolute;
+    top: 900px;   /* distance depuis le bas du header */
+    right: 130px;     /* distance depuis la gauche du header */
+    padding: 55px 70px;
+    display: block;
+}
+
+.imgMoi{
+    width: 280px;
+    box-shadow: 0 0 20px rgb(0, 0, 255);
+    border-radius: 50px;
+}
+
+.logo-box{
+    position: absolute;
+    top: 1800px;   /* distance depuis le bas du header */
+    right: 130px;     /* distance depuis la gauche du header */
+    padding: 55px 70px;
+    display: block;
+}
+
+
+/* SECTION GLOBALE */
+#skills {
+    margin-top: 60px;
+}
+
+#skills h2 {
+    margin-bottom: 30px;
+}
+
+/* CONTENEUR PRINCIPAL */
+.contentSkills {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* BLOCS MAITRISE / APPRENTISSAGE */
+.Skills1,
+.Skills2 {
+    background: #000000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow:0 0 20px rgb(0, 0, 255)
+}
+
+/* TITRES INTERIEURS */
+.Skills1 > h2,
+.Skills2 > h2 {
+    text-align: center;
+    color: white;
+    border: none;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.459));
+}
+
+/* ALIGNEMENT DES LOGOS */
+.Skills1,
+.Skills2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* LIENS / ICÔNES */
+.Skills1 a,
+.Skills2 a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* HOVER */
+.Skills1 a:hover,
+.Skills2 a:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+/* TEXTE SOUS LOGO */
+figcaption {
+    font-size: 0.9rem;
+}
+
+/* APERCU */
+.cv-preview {
+    width: 250px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cv-preview img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #000000;
+    box-shadow: 0 0 20px rgb(0, 0, 255);
+    transition: transform 0.3s ease;
+}
+
+.cv-preview:hover img {
+    transform: scale(1.05);
+}
+
+.cv-preview span {
+    display: block;
+    margin-top: 3px;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+/* MODALE */
+.cv-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+}
+
+/* CONTENU MODALE */
+.cv-modal-content {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 5vh;
+    background: #020617;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* PDF */
+.cv-modal-content iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* BOUTON FERMER */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* TELECHARGER */
+.download-btn {
+    margin-top: 15px;
+    align-self: center;
+    background: #2563eb;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    background: #1e40af;
+}
+
+
+.box-1-projet,
+.box-2-projet {
+    margin-bottom: 60px; /* Ajustez la valeur selon l'espace souhaité */
+}
+
+
+
+/* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 *//* PROJET 1 */
+
+.box-1-projet{
+    background: #000000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 155%;
+    display: flex;
+}
+
+.box-1-projet > .box-droite > h3{
+    margin-left: 300px;
+    color: white;
+}
+.box-1-projet > .box-droite > p {
+    margin-left: 35px;
+    color: white;
+}
+
+
+/* VIDEO */
+
+.video1 {
+    width: 700px;      /* taille de la vidéo */
+    border-radius: 15px;
+    border: solid 3px black;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgb(0, 0, 255);
+}
+
+/* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 *//* PROJET 2 */
+
+.box-2-projet{
+    background: #000000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 155%;
+    display: flex;
+}
+
+.box-2-projet > .box-gauche > h3{
+    margin-left: 230px;
+    color: rgb(255, 255, 255);
+}
+.box-2-projet > .box-gauche > p {
+    margin-right: 35px;
+    color: rgb(255, 255, 255);
+}
+
+.imgSiteEpic {
+    width: 700px;      /* taille de l'image */
+    border-radius: 15px;
+    border: solid 3px black;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgb(0, 0, 255);
+}
+
+.imgSiteEpic:hover {
+    transform: scale(1.05); /* zoom léger */
+    cursor: pointer; /* change le curseur pour montrer que c’est interactif */
+    transition: all 0.3s ease;
+}
+
+/* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 *//* PROJET 3 */
+
+.box-3-projet{
+    background: #000000;
+    border-radius: 20px;
+    padding: 30px 40px;
+    width: 155%;
+    display: flex;
+}
+
+.box-3-projet > .box-droite > h3{
+    margin-left: 300px;
+    color: white;
+}
+.box-3-projet > .box-droite > p {
+    margin-left: 35px;
+    color: white;
+}
+
+
+/* VIDEO */
+
+.video1 {
+    width: 700px;      /* taille de la vidéo */
+    border-radius: 15px;
+    border: solid 3px black;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgb(0, 0, 255);
+    cursor: pointer;
+}
