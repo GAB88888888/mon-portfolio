@@ -77,12 +77,22 @@ video.addEventListener('dblclick', function() {
     }
 });
 
+
 window.onload = function() {
     const zoomWarning = document.getElementById("zoomWarning");
-    zoomWarning.style.display = 'flex'; // Affiche la pop-up lorsque la page charge
+    const lastSeen = localStorage.getItem("zoomWarningLastSeen");
+
+    const THIRTY_MINUTES = 30 * 60 * 1000; // 30 min en ms
+    const now = Date.now();
+
+    if (!lastSeen || (now - lastSeen) > THIRTY_MINUTES) {
+        zoomWarning.style.display = 'flex';
+    }
 };
 
 function closePopup() {
     const zoomWarning = document.getElementById("zoomWarning");
-    zoomWarning.style.display = 'none'; // Cache la pop-up
+    zoomWarning.style.display = 'none';
+
+    localStorage.setItem("zoomWarningLastSeen", Date.now());
 }
