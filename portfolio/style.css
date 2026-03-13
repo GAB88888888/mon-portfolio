@@ -171,6 +171,7 @@ p2{
 
 .imgMoi{
     width: 280px;
+    border: 8px solid #000000;
     box-shadow: 0 0 20px rgb(0, 0, 255);
     border-radius: 50px;
 }
